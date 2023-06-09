@@ -1,0 +1,44 @@
+[
+    {
+        "instrument": "Piano",
+        "image": "https://i.ibb.co/Xy1Bxzx/ss100464-6.webp",
+        "price": 50,
+        "instructor": "John Smith",
+        "seats": 10
+    },
+    {
+        "instrument": "Guitar",
+        "image": "https://i.ibb.co/Xy1Bxzx/ss100464-6.webp",
+        "price": 40,
+        "instructor": "Sarah Johnson",
+        "seats": 8
+    },
+    {
+        "instrument": "Violin",
+        "image": "https://i.ibb.co/Xy1Bxzx/ss100464-6.webp",
+        "price": 60,
+        "instructor": "Michael Brown",
+        "seats": 6
+    },
+    {
+        "instrument": "Drums",
+        "image": "https://i.ibb.co/Xy1Bxzx/ss100464-6.webp",
+        "price": 45,
+        "instructor": "Emily Davis",
+        "seats": 5
+    },
+    {
+        "instrument": "Saxophone",
+        "image": "https://i.ibb.co/Xy1Bxzx/ss100464-6.webp",
+        "price": 55,
+        "instructor": "David Wilson",
+        "seats": 4
+    },
+    {
+        "instrument": "Flute",
+        "image": "https://i.ibb.co/Xy1Bxzx/ss100464-6.webp",
+        "price": 35,
+        "instructor": "Olivia Taylor",
+        "seats": 7
+    }
+]

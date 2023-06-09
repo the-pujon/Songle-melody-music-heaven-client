@@ -1,0 +1,98 @@
+[
+    {
+        "_id": "1",
+        "instrument": "Piano",
+        "image": "https://i.ibb.co/Xy1Bxzx/ss100464-6.webp",
+        "price": 50,
+        "instructor": "John Smith",
+        "seatsAvailable": 10
+    },
+    {
+        "_id": "2",
+        "instrument": "Guitar",
+        "image": "https://i.ibb.co/Xy1Bxzx/ss100464-6.webp",
+        "price": 40,
+        "instructor": "Sarah Johnson",
+        "seatsAvailable": 8
+    },
+    {
+        "_id": "3",
+        "instrument": "Violin",
+        "image": "https://i.ibb.co/Xy1Bxzx/ss100464-6.webp",
+        "price": 60,
+        "instructor": "Michael Brown",
+        "seatsAvailable": 6
+    },
+    {
+        "_id": "4",
+        "instrument": "Drums",
+        "image": "https://i.ibb.co/Xy1Bxzx/ss100464-6.webp",
+        "price": 45,
+        "instructor": "Emily Davis",
+        "seatsAvailable": 5
+    },
+    {
+        "_id": "5",
+        "instrument": "Saxophone",
+        "image": "https://i.ibb.co/Xy1Bxzx/ss100464-6.webp",
+        "price": 55,
+        "instructor": "David Wilson",
+        "seatsAvailable": 4
+    },
+    {
+        "_id": "6",
+        "instrument": "Flute",
+        "image": "https://i.ibb.co/Xy1Bxzx/ss100464-6.webp",
+        "price": 35,
+        "instructor": "Olivia Taylor",
+        "seatsAvailable": 7
+    },
+    {
+        "_id": "7",
+        "instrument": "Trumpet",
+        "image": "https://i.ibb.co/Xy1Bxzx/ss100464-6.webp",
+        "price": 45,
+        "instructor": "Andrew Roberts",
+        "seatsAvailable": 6
+    },
+    {
+        "_id": "8",
+        "instrument": "Bass Guitar",
+        "image": "https://i.ibb.co/Xy1Bxzx/ss100464-6.webp",
+        "price": 55,
+        "instructor": "Jessica Anderson",
+        "seatsAvailable": 5
+    },
+    {
+        "_id": "9",
+        "instrument": "Cello",
+        "image": "https://i.ibb.co/Xy1Bxzx/ss100464-6.webp",
+        "price": 65,
+        "instructor": "Daniel Mitchell",
+        "seatsAvailable": 3
+    },
+    {
+        "_id": "10",
+        "instrument": "Harp",
+        "image": "https://i.ibb.co/Xy1Bxzx/ss100464-6.webp",
+        "price": 70,
+        "instructor": "Sophia Hernandez",
+        "seatsAvailable": 4
+    },
+    {
+        "_id": "11",
+        "instrument": "Trumpet",
+        "image": "https://i.ibb.co/Xy1Bxzx/ss100464-6.webp",
+        "price": 45,
+        "instructor": "William Thompson",
+        "seatsAvailable": 7
+    },
+    {
+        "_id": "12",
+        "instrument": "Sitar",
+        "image": "https://i.ibb.co/Xy1Bxzx/ss100464-6.webp",
+        "price": 80,
+        "instructor": "Isabella Rodriguez",
+        "seatsAvailable": 2
+    }
+]

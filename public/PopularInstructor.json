@@ -1,0 +1,32 @@
+[
+    {
+        "name": "John Smith",
+        "image": "https://i.ibb.co/Xy1Bxzx/ss100464-6.webp",
+        "email": "john.smith@example.com"
+    },
+    {
+        "name": "Sarah Johnson",
+        "image": "https://i.ibb.co/Xy1Bxzx/ss100464-6.webp",
+        "email": "sarah.johnson@example.com"
+    },
+    {
+        "name": "Michael Brown",
+        "image": "https://i.ibb.co/Xy1Bxzx/ss100464-6.webp",
+        "email": "michael.brown@example.com"
+    },
+    {
+        "name": "Emily Davis",
+        "image": "https://i.ibb.co/Xy1Bxzx/ss100464-6.webp",
+        "email": "emily.davis@example.com"
+    },
+    {
+        "name": "David Wilson",
+        "image": "https://i.ibb.co/Xy1Bxzx/ss100464-6.webp",
+        "email": "david.wilson@example.com"
+    },
+    {
+        "name": "Olivia Taylor",
+        "image": "https://i.ibb.co/Xy1Bxzx/ss100464-6.webp",
+        "email": "olivia.taylor@example.com"
+    }
+]
