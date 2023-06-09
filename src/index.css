@@ -10,3 +10,41 @@
 
   background-color: var(--primaryColor);
 }
+
+a {
+  position: relative;
+  margin: 0 5px;
+  padding: 0 5px;
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -0.2rem;
+    left: 0;
+    border-radius: 10rem;
+
+    width: 0;
+    height: 1.5px;
+    background-color: var(--primaryColor);
+    transition: all 0.5s;
+  }
+
+  &:active {
+    background: none;
+
+    &::after {
+      opacity: 1;
+    }
+  }
+
+  &:hover {
+    &::after {
+      width: 100%;
+    }
+  }
+
+  &:focus {
+    background-color: transparent;
+  }
+}

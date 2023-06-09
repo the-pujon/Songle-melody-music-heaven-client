@@ -27,7 +27,7 @@ const Navbar = () => {
         <NavLink to="/classes">Classes</NavLink>
       </li>
       <li>
-        <a>Dashboard</a>
+        <NavLink to="/dashboard">Dashboard</NavLink>
       </li>
     </>
   );
@@ -61,9 +61,9 @@ const Navbar = () => {
                 {navbarOption}
               </ul>
             </div>
-            <a className="btn btn-ghost normal-case text-xl">
+            <div className="  normal-case text-xl">
               Songle Melody Music Heaven
-            </a>
+            </div>
           </div>
           <div className="navbar-center hidden lg:flex">
             <ul className="menu menu-horizontal px-1">{navbarOption}</ul>
@@ -71,7 +71,7 @@ const Navbar = () => {
           <div className="navbar-end">
             <div className="flex-none">
               <div className="dropdown dropdown-end">
-                {user ? (
+                {!user ? (
                   <>
                     {" "}
                     <div>
@@ -95,12 +95,9 @@ const Navbar = () => {
                   </>
                 ) : (
                   <>
-                    <Link
-                      to="/login"
-                      className="btn bg-[color:var(--secondaryColor)] hover:bg-[color:var(--hoverColor1)] border-0"
-                    >
-                      Login
-                    </Link>
+                    <button className="btn bg-[color:var(--secondaryColor)] hover:bg-[color:var(--hoverColor1)] border-0">
+                      <Link to="/login">Login</Link>
+                    </button>
                   </>
                 )}
               </div>
