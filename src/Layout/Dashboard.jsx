@@ -7,6 +7,7 @@ import {
 } from "react-icons/ai";
 import { FaUsers } from "react-icons/fa";
 import { BsBuildingAdd } from "react-icons/bs";
+import { RiListSettingsLine } from "react-icons/ri";
 import { BiSelectMultiple, BiHistory } from "react-icons/bi";
 
 import useRole from "../Hooks/useRole";
@@ -53,7 +54,7 @@ const Dashboard = () => {
                 </li>
                 <li className="hover:text-[color:var(--hoverColor2)]">
                   <NavLink to="/dashboard/manageClasses">
-                    Manage Classes
+                    <RiListSettingsLine /> Manage Classes
                   </NavLink>
                 </li>
                 <li className="hover:text-[color:var(--hoverColor2)]">
