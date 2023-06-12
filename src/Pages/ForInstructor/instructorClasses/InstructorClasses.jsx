@@ -2,6 +2,8 @@ import React from "react";
 import useAxiosSecure from "../../../Hooks/useAxiosSecure";
 import useAuth from "../../../Hooks/useAuth";
 import { useQuery } from "@tanstack/react-query";
+import { AiFillEdit } from "react-icons/ai";
+import { Link } from "react-router-dom";
 
 const InstructorClasses = () => {
   const { user } = useAuth();
@@ -16,11 +18,11 @@ const InstructorClasses = () => {
     }
   );
 
-  console.log(instructorClasses);
+  //console.log(instructorClasses);
 
   return (
     <div>
-      <h1 className="text-5xl text-center my-6">Add Class</h1>
+      <h1 className="text-5xl text-center my-6">My Class</h1>
       <div>
         <div className="overflow-x-auto">
           <table className="table">
@@ -60,9 +62,17 @@ const InstructorClasses = () => {
                   <th>{instructorClass.feedback}</th>
                   <th>
                     <button
+                      disabled={instructorClass.status !== "pending"}
+                      title="update"
                       className={`btn btn-xs bg-[color:var(--secondaryColor)] text-white hover:bg-[color:var(--hoverColor1)] `}
                     >
-                      Update
+                      <Link
+                        to="/dashboard/updateClass"
+                        state={instructorClass}
+                        className="w-full"
+                      >
+                        <AiFillEdit />
+                      </Link>
                     </button>
                   </th>
                 </tr>

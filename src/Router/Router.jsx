@@ -13,6 +13,10 @@ import PrivateRoute from "./PrivateRoute";
 import AddClass from "../Pages/ForInstructor/AddClass/AddClass";
 import InstructorClasses from "../Pages/ForInstructor/instructorClasses/instructorClasses";
 import ManageClasses from "../Pages/ForAdmin/ManageClasses/ManageClasses";
+import UpdateClass from "../Pages/ForInstructor/UpdateClass/UpdateClass";
+import StudentRoute from "./StudentRoute";
+import InstructorRoute from "./InstructorRoute";
+import AdminRoute from "./AdminRoute";
 
 const router = createBrowserRouter([
   {
@@ -51,29 +55,61 @@ const router = createBrowserRouter([
     children: [
       {
         path: "selectedClass",
-        element: <SelectedClass />,
+        element: (
+          <StudentRoute>
+            <SelectedClass />
+          </StudentRoute>
+        ),
       },
       {
         path: "enrolledClass",
-        element: <EnrolledClass />,
+        element: (
+          <StudentRoute>
+            <EnrolledClass />
+          </StudentRoute>
+        ),
       },
       //admin
       {
         path: "manageUsers",
-        element: <ManageUsers />,
+        element: (
+          <AdminRoute>
+            <ManageUsers />
+          </AdminRoute>
+        ),
       },
       {
         path: "manageClasses",
-        element: <ManageClasses />,
+        element: (
+          <AdminRoute>
+            <ManageClasses />
+          </AdminRoute>
+        ),
       },
       //instructor
       {
         path: "addClass",
-        element: <AddClass />,
+        element: (
+          <InstructorRoute>
+            <AddClass />
+          </InstructorRoute>
+        ),
       },
       {
         path: "myClasses",
-        element: <InstructorClasses />,
+        element: (
+          <InstructorRoute>
+            <InstructorClasses />
+          </InstructorRoute>
+        ),
+      },
+      {
+        path: "updateClass",
+        element: (
+          <InstructorRoute>
+            <UpdateClass />
+          </InstructorRoute>
+        ),
       },
     ],
   },
