@@ -2,97 +2,121 @@
     {
         "_id": "1",
         "instrument": "Piano",
-        "image": "https://i.ibb.co/Xy1Bxzx/ss100464-6.webp",
+        "image": "https://i.ibb.co/DLCtXyN/keyboard-explorers-students-playing.jpg",
         "price": 50,
         "instructor": "John Smith",
-        "seatsAvailable": 10
+        "seatsAvailable": 10,
+        "className": "Piano Beginner",
+        "totalStudents": 20
     },
     {
         "_id": "2",
         "instrument": "Guitar",
-        "image": "https://i.ibb.co/Xy1Bxzx/ss100464-6.webp",
+        "image": "https://i.ibb.co/y8PRPfb/DSC03907.jpg",
         "price": 40,
         "instructor": "Sarah Johnson",
-        "seatsAvailable": 8
+        "seatsAvailable": 8,
+        "className": "Guitar Beginner",
+        "totalStudents": 10
     },
     {
         "_id": "3",
         "instrument": "Violin",
-        "image": "https://i.ibb.co/Xy1Bxzx/ss100464-6.webp",
+        "image": "https://i.ibb.co/mcrLQF1/1805-settlementmusic-mlc-5852-e1545153380699.jpg",
         "price": 60,
         "instructor": "Michael Brown",
-        "seatsAvailable": 6
+        "seatsAvailable": 6,
+        "className": "Violin Intermediate",
+        "totalStudents": 25
     },
     {
         "_id": "4",
         "instrument": "Drums",
-        "image": "https://i.ibb.co/Xy1Bxzx/ss100464-6.webp",
+        "image": "https://i.ibb.co/0qkgMjW/6e6378085762d607abcb3dca5c3d4bd65c08f44b.webp",
         "price": 45,
         "instructor": "Emily Davis",
-        "seatsAvailable": 5
+        "seatsAvailable": 5,
+        "className": "Drums Beginner",
+        "totalStudents": 28
     },
     {
         "_id": "5",
         "instrument": "Saxophone",
-        "image": "https://i.ibb.co/Xy1Bxzx/ss100464-6.webp",
+        "image": "https://i.ibb.co/hL6QkGR/download.jpg",
         "price": 55,
         "instructor": "David Wilson",
-        "seatsAvailable": 4
+        "seatsAvailable": 4,
+        "className": "Saxophone Beginner",
+        "totalStudents": 21
     },
     {
         "_id": "6",
         "instrument": "Flute",
-        "image": "https://i.ibb.co/Xy1Bxzx/ss100464-6.webp",
+        "image": "https://i.ibb.co/x7wqVLY/Aug-21-The-Importance-of-Music-Education-in-Schools-web.jpg",
         "price": 35,
         "instructor": "Olivia Taylor",
-        "seatsAvailable": 7
+        "seatsAvailable": 7,
+        "className": "Flute Intermediate",
+        "totalStudents": 40
     },
     {
         "_id": "7",
         "instrument": "Trumpet",
-        "image": "https://i.ibb.co/Xy1Bxzx/ss100464-6.webp",
+        "image": "https://i.ibb.co/GdbQGdj/HERO-Prep-Brass-1795.jpg",
         "price": 45,
         "instructor": "Andrew Roberts",
-        "seatsAvailable": 6
+        "seatsAvailable": 6,
+        "className": "Trumpet Beginner",
+        "totalStudents": 15
     },
     {
         "_id": "8",
         "instrument": "Bass Guitar",
-        "image": "https://i.ibb.co/Xy1Bxzx/ss100464-6.webp",
+        "image": "https://i.ibb.co/VwdZyyX/istockphoto-1339982892-612x612.jpg",
         "price": 55,
         "instructor": "Jessica Anderson",
-        "seatsAvailable": 5
+        "seatsAvailable": 5,
+        "className": "Bass Guitar Beginner",
+        "totalStudents": 35
     },
     {
         "_id": "9",
         "instrument": "Cello",
-        "image": "https://i.ibb.co/Xy1Bxzx/ss100464-6.webp",
+        "image": "https://i.ibb.co/8YLNSGC/cello-adults-class.jpg",
         "price": 65,
         "instructor": "Daniel Mitchell",
-        "seatsAvailable": 3
+        "seatsAvailable": 3,
+        "className": "Cello Intermediate",
+        "totalStudents": 32
     },
     {
         "_id": "10",
         "instrument": "Harp",
-        "image": "https://i.ibb.co/Xy1Bxzx/ss100464-6.webp",
+        "image": "https://i.ibb.co/7kH5bMc/ua-fine-arts-performance-harp-emphasis.jpg",
         "price": 70,
         "instructor": "Sophia Hernandez",
-        "seatsAvailable": 4
+        "seatsAvailable": 4,
+        "className": "Harp Intermediate",
+        "totalStudents": 27
     },
     {
         "_id": "11",
         "instrument": "Trumpet",
-        "image": "https://i.ibb.co/Xy1Bxzx/ss100464-6.webp",
+        "image": "https://i.ibb.co/fYhjsp5/best-online-trumpet-lessons.jpg",
         "price": 45,
         "instructor": "William Thompson",
-        "seatsAvailable": 7
+        "seatsAvailable": 7,
+        "className": "Trumpet Intermediate",
+        "totalStudents": 20
     },
     {
         "_id": "12",
         "instrument": "Sitar",
-        "image": "https://i.ibb.co/Xy1Bxzx/ss100464-6.webp",
+        "image": "https://i.ibb.co/ykjJhwD/SDA01921-IND.jpg",
         "price": 80,
         "instructor": "Isabella Rodriguez",
-        "seatsAvailable": 2
+        "seatsAvailable": 2,
+        "className": "Sitar Beginner",
+        "totalStudents": 20
     }
 ]

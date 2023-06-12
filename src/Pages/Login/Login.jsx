@@ -1,13 +1,14 @@
 import React, { useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { FaGithub, FaGoogle } from "react-icons/fa";
+
 import { useForm } from "react-hook-form";
 import login1 from "../../assets/login2.gif";
 import Swal from "sweetalert2";
 import { AuthContext } from "../../Provider/AuthProvider";
+import SocialLogin from "../../Components/Shared/SocialLogin/SocialLogin";
 
 const Login = () => {
-  const { loginWithEmail, loginWithGoogle } = useContext(AuthContext);
+  const { loginWithEmail } = useContext(AuthContext);
 
   const navigate = useNavigate();
 
@@ -33,21 +34,6 @@ const Login = () => {
         navigate("/");
       })
       .catch((err) => console.error(err));
-  };
-
-  const handleGoogleLogin = () => {
-    loginWithGoogle()
-      .then(() => {
-        Swal.fire({
-          position: "top-end",
-          icon: "success",
-          title: "Login successful",
-          showConfirmButton: false,
-          timer: 1500,
-        });
-        navigate("/");
-      })
-      .catch((err) => console.error(first));
   };
 
   return (
@@ -113,25 +99,7 @@ const Login = () => {
                   </button>
                 </div>
 
-                <div className="divider">OR</div>
-                <div className="form-control flex flex-row justify-center gap-4 ">
-                  {/* login with github button */}
-                  <div
-                    className="btn btn-circle  bg-[color:var(--secondaryColor)] hover:bg-[color:var(--hoverColor1)] border-0 "
-
-                    //onClick={handleGithubLogin}
-                  >
-                    <FaGithub className="text-3xl" />
-                  </div>
-                  <div
-                    //login with google button
-
-                    className="btn btn-circle  bg-[color:var(--secondaryColor)] hover:bg-[color:var(--hoverColor1)] border-0 "
-                    onClick={handleGoogleLogin}
-                  >
-                    <FaGoogle className="text-3xl" />
-                  </div>
-                </div>
+                <SocialLogin />
               </form>
             </div>
           </div>

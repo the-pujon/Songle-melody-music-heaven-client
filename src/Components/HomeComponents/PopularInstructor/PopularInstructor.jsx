@@ -19,10 +19,12 @@ const PopularInstructor = () => {
   const [popularInstructor, setPopularInstructor] = useState([]);
 
   useEffect(() => {
-    fetch("PopularInstructor.json")
+    fetch("http://localhost:3000/instructors")
       .then((res) => res.json())
       .then((data) => {
-        setPopularInstructor(data);
+        const sliceData = data.slice(0, 6);
+
+        setPopularInstructor(sliceData);
       })
       .catch((err) => console.error(err));
   }, []);
@@ -66,7 +68,7 @@ const PopularInstructor = () => {
         className="mySwiper w-11/12 mx-auto"
       >
         {popularInstructor.map((card) => (
-          <SwiperSlide>
+          <SwiperSlide key={card._id}>
             <InstructorCard
               img={card.image}
               name={card.name}

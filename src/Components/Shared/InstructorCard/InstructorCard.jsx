@@ -4,7 +4,7 @@ const InstructorCard = ({ img, name, email }) => {
   return (
     <div>
       <div className="card card-compact w-96 bg-[color:var(--primaryColor)] shadow-xl rounded-none">
-        <figure>
+        <figure className="h-64">
           <img src={img} alt="Shoes" />
         </figure>
         <div className="card-body">

@@ -1,27 +1,33 @@
 import React from "react";
 import { Link, NavLink, Outlet } from "react-router-dom";
+import { AiOutlineMenuUnfold } from "react-icons/ai";
+import useRole from "../Hooks/useRole";
 
 const Dashboard = () => {
-  const isAdmin = false;
-  const isInstructor = true;
+  const isAdmin = true;
+  const isInstructor = false;
+
+  const [role] = useRole();
+
+  console.log(role);
 
   return (
     <div>
       <div className="drawer lg:drawer-open">
         <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
-        <div className="drawer-content flex flex-col items-center justify-center">
-          {/* Page content here */}
-          <Outlet />
+        <div className="drawer-content ">
           <label
             htmlFor="my-drawer-2"
-            className="btn btn-primary drawer-button lg:hidden"
+            className="btn btn-primary drawer-button lg:hidden text-3xl"
           >
-            Open drawer
+            <AiOutlineMenuUnfold />
           </label>
+          {/* Page content here */}
+          <Outlet />
         </div>
         <div className="drawer-side ">
           <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
-          <ul className="menu w-80 h-full bg-[color:var(--secondaryColor)] text-white">
+          <ul className="menu w-64 h-full bg-[color:var(--secondaryColor)] text-white">
             <div className="text-2xl text-white  text-center bg-[var(--hoverColor1)] ">
               Songle Melody Music <br />
               <span>Heaven</span>
@@ -30,7 +36,7 @@ const Dashboard = () => {
 
             {/* Sidebar content here */}
 
-            {isAdmin ? (
+            {role === "admin" ? (
               <>
                 <li className="hover:text-[color:var(--hoverColor2)]">
                   <Link>Admin Home</Link>
@@ -39,25 +45,25 @@ const Dashboard = () => {
                   <Link>Manage Classes</Link>
                 </li>
                 <li className="hover:text-[color:var(--hoverColor2)]">
-                  <Link>Manage Users</Link>
+                  <NavLink to="/dashboard/manageUsers">Manage Users</NavLink>
                 </li>
               </>
-            ) : isInstructor ? (
+            ) : role === "instructor" ? (
               <>
                 <li className="hover:text-[color:var(--hoverColor2)]">
                   <Link>Instructor Home</Link>
                 </li>
                 <li className="hover:text-[color:var(--hoverColor2)]">
-                  <Link>Add Class</Link>
+                  <NavLink to="/dashboard/addClass">Add Class</NavLink>
                 </li>
                 <li className="hover:text-[color:var(--hoverColor2)]">
-                  <Link>My Classes</Link>
+                  <NavLink to="/dashboard/myClasses">My Classes</NavLink>
                 </li>
               </>
             ) : (
               <>
                 <li className="hover:text-[color:var(--hoverColor2)]">
-                  <NavLink to="/dashboard/selectedClass">Student Home</NavLink>
+                  <Link>Student Home</Link>
                 </li>
                 <li className="hover:text-[color:var(--hoverColor2)]">
                   <NavLink to="/dashboard/selectedClass">
@@ -68,6 +74,9 @@ const Dashboard = () => {
                   <NavLink to="/dashboard/enrolledClass">
                     Enrolled Class
                   </NavLink>
+                </li>
+                <li className="hover:text-[color:var(--hoverColor2)]">
+                  <Link>Payment History</Link>
                 </li>
               </>
             )}

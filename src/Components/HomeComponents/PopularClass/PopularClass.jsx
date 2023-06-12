@@ -7,10 +7,12 @@ const PopularClass = () => {
   const [popularClasses, setPopularClasses] = useState([]);
 
   useEffect(() => {
-    fetch("PopularClass.json")
+    fetch("http://localhost:3000/classes")
       .then((res) => res.json())
       .then((data) => {
-        setPopularClasses(data);
+        const sliceData = data.slice(0, 6);
+
+        setPopularClasses(sliceData);
       })
       .catch((err) => console.error(err));
   }, []);
@@ -20,13 +22,8 @@ const PopularClass = () => {
       <SectionTitle title="Popular Classes" />
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-fit gap-8 mx-auto">
         {popularClasses.map((card) => (
-          <div key={card.instrument}>
-            <ClassCard
-              img={card.image}
-              instructor={card.instructor}
-              seats={card.seats}
-              price={card.price}
-            />
+          <div key={card._id}>
+            <ClassCard card={card} />
           </div>
         ))}
       </div>
