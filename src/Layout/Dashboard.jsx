@@ -92,7 +92,7 @@ const Dashboard = () => {
                 </li>
                 <li className="hover:text-[color:var(--hoverColor2)]">
                   <NavLink to="/dashboard/enrolledClass">
-                    Enrolled Class
+                    <BsBuildingAdd /> Enrolled Class
                   </NavLink>
                 </li>
                 <li className="hover:text-[color:var(--hoverColor2)]">
