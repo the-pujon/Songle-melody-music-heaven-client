@@ -19,9 +19,3 @@ const useSelectClass = () => {
 };
 
 export default useSelectClass;
-//queryFn: async () => {
-//  const res = await fetch(
-//    `http://localhost:3000/selectedClass?email=${user?.email}`
-//  );
-//  return res.json();
-//},

@@ -2,16 +2,18 @@ import React from "react";
 import useSelectClass from "../../../Hooks/useSelectClass";
 
 import { FaPaypal, FaTrash } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const SelectedClass = () => {
   const [selectedClasses, refetch1] = useSelectClass();
 
-  const total = selectedClasses.reduce((sum, item) => sum + item.price, 0);
-
   const handleDelete = (selectedClass) => {
-    fetch(`http://localhost:3000/selectedClass/${selectedClass._id}`, {
-      method: "DELETE",
-    })
+    fetch(
+      `https://backend-songle.vercel.app/selectedClass/${selectedClass._id}`,
+      {
+        method: "DELETE",
+      }
+    )
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
@@ -19,13 +21,16 @@ const SelectedClass = () => {
 
         const remainingSeats = selectedClass.seatsAvailable + 1;
 
-        fetch(`http://localhost:3000/classes/${selectedClass.classId}`, {
-          method: "PUT",
-          headers: {
-            "content-type": "application/json",
-          },
-          body: JSON.stringify({ remainingSeats }),
-        })
+        fetch(
+          `https://backend-songle.vercel.app/classes/${selectedClass.classId}`,
+          {
+            method: "PUT",
+            headers: {
+              "content-type": "application/json",
+            },
+            body: JSON.stringify({ remainingSeats }),
+          }
+        )
           .then((res) => res.json())
           .then((data) => {
             console.log("added");
@@ -41,7 +46,6 @@ const SelectedClass = () => {
       </div>
       <div className="text-2xl font-semibold flex justify-between">
         <div>Total Classes: {selectedClasses.length}</div>
-        <div>Total Payment: ${total}</div>
       </div>
       <div>
         <div className="overflow-x-auto">
@@ -82,12 +86,14 @@ const SelectedClass = () => {
                     >
                       <FaTrash />
                     </button>
-                    <button
+                    <Link
+                      to="/dashboard/payment"
+                      state={selectedClass}
                       title="Payment"
                       className="btn btn-xs bg-[color:var(--secondaryColor)] text-white hover:bg-[color:var(--hoverColor1)]"
                     >
                       <FaPaypal />
-                    </button>
+                    </Link>
                   </td>
                 </tr>
               ))}

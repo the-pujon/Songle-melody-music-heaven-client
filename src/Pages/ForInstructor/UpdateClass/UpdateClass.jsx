@@ -47,7 +47,7 @@ const UpdateClass = () => {
       newPrice,
     };
 
-    fetch(`http://localhost:3000/instructorClasses/${_id}`, {
+    fetch(`https://backend-songle.vercel.app/instructorClasses/${_id}`, {
       method: "PATCH",
       headers: {
         "content-type": "application/json",

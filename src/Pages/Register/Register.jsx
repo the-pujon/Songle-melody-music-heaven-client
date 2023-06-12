@@ -47,7 +47,7 @@ const Register = () => {
             };
 
             console.log(user);
-            fetch("http://localhost:3000/users", {
+            fetch("https://backend-songle.vercel.app/users", {
               method: "POST",
               headers: {
                 "content-type": "application/json",

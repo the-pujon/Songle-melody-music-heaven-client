@@ -38,7 +38,7 @@ const AddClass = () => {
       feedback,
     };
 
-    fetch("http://localhost:3000/instructorClasses", {
+    fetch("https://backend-songle.vercel.app/instructorClasses", {
       method: "POST",
       headers: {
         "content-type": "application/json",

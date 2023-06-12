@@ -8,7 +8,7 @@ const PopularClass = () => {
   const [popularClasses, setPopularClasses] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:3000/classes")
+    fetch("https://backend-songle.vercel.app/classes")
       .then((res) => res.json())
       .then((data) => {
         const sliceData = data.slice(0, 6);

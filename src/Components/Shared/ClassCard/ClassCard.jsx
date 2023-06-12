@@ -38,10 +38,11 @@ const ClassCard = ({ card }) => {
       totalStudents,
       classId: _id,
       userEmail: user?.email,
+      instructorId: card?.instructorId,
     };
 
     if (user && user?.email) {
-      fetch("http://localhost:3000/selectedClass", {
+      fetch("https://backend-songle.vercel.app/selectedClass", {
         method: "POST",
         headers: {
           "content-type": "application/json",
@@ -53,28 +54,30 @@ const ClassCard = ({ card }) => {
           refetch1();
 
           const remainingSeats = seatsAvailable - 1;
-          const newTotalStudents = totalStudents + 1;
 
-          fetch(`http://localhost:3000/classes/${selectedClass.classId}`, {
-            method: "PUT",
-            headers: {
-              "content-type": "application/json",
-            },
-            body: JSON.stringify({ remainingSeats, newTotalStudents }),
-          })
+          fetch(
+            `https://backend-songle.vercel.app/classes/${selectedClass.classId}`,
+            {
+              method: "PUT",
+              headers: {
+                "content-type": "application/json",
+              },
+              body: JSON.stringify({ remainingSeats }),
+            }
+          )
             .then((res) => res.json())
             .then((data) => {
               refetch2();
 
               if (card?.instructorId) {
                 fetch(
-                  `http://localhost:3000/instructorClasses/${card?.instructorId}`,
+                  `https://backend-songle.vercel.app/instructorClasses/${card?.instructorId}`,
                   {
                     method: "PATCH",
                     headers: {
                       "content-type": "application/json",
                     },
-                    body: JSON.stringify({ remainingSeats, newTotalStudents }),
+                    body: JSON.stringify({ remainingSeats }),
                   }
                 )
                   .then((res) => res.json())

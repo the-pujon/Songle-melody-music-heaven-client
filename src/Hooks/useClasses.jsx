@@ -9,7 +9,7 @@ const useClasses = () => {
   const { refetch: refetch2, data: allClasses = [] } = useQuery({
     queryKey: ["Classes"],
     queryFn: async () => {
-      const res = await fetch(`http://localhost:3000/classes`);
+      const res = await fetch(`https://backend-songle.vercel.app/classes`);
       return res.json();
     },
   });

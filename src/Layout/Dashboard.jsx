@@ -48,11 +48,6 @@ const Dashboard = () => {
             {role === "admin" ? (
               <>
                 <li className="hover:text-[color:var(--hoverColor2)]">
-                  <Link>
-                    <AiOutlineHome /> Admin Home
-                  </Link>
-                </li>
-                <li className="hover:text-[color:var(--hoverColor2)]">
                   <NavLink to="/dashboard/manageClasses">
                     <RiListSettingsLine /> Manage Classes
                   </NavLink>
@@ -66,11 +61,6 @@ const Dashboard = () => {
             ) : role === "instructor" ? (
               <>
                 <li className="hover:text-[color:var(--hoverColor2)]">
-                  <Link>
-                    <AiOutlineHome /> Instructor Home
-                  </Link>
-                </li>
-                <li className="hover:text-[color:var(--hoverColor2)]">
                   <NavLink to="/dashboard/addClass">
                     <AiOutlineFileAdd /> Add Class
                   </NavLink>
@@ -82,11 +72,6 @@ const Dashboard = () => {
             ) : (
               <>
                 <li className="hover:text-[color:var(--hoverColor2)]">
-                  <Link>
-                    <AiOutlineHome /> Student Home
-                  </Link>
-                </li>
-                <li className="hover:text-[color:var(--hoverColor2)]">
                   <NavLink to="/dashboard/selectedClass">
                     <BiSelectMultiple /> Selected Class
                   </NavLink>
@@ -97,9 +82,9 @@ const Dashboard = () => {
                   </NavLink>
                 </li>
                 <li className="hover:text-[color:var(--hoverColor2)]">
-                  <Link>
+                  <NavLink to="/dashboard/paymentHistory">
                     <BiHistory /> Payment History
-                  </Link>
+                  </NavLink>
                 </li>
               </>
             )}
@@ -113,9 +98,6 @@ const Dashboard = () => {
             </li>
             <li>
               <NavLink to="/classes">Classes</NavLink>
-            </li>
-            <li>
-              <Link>logout</Link>
             </li>
           </ul>
         </div>

@@ -18,7 +18,7 @@ const ManageUsers = () => {
   const handleRole = (role, user) => {
     //console.log(role, user);
 
-    fetch(`http://localhost:3000/users/${user._id}`, {
+    fetch(`https://backend-songle.vercel.app/users/${user._id}`, {
       method: "PATCH",
       headers: {
         "content-type": "application/json",

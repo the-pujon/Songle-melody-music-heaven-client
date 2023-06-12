@@ -33,20 +33,23 @@ const ManageClasses = () => {
     };
 
     //console.log(instructorClass, status);
-    fetch(`http://localhost:3000/instructorClasses/${instructorClass._id}`, {
-      method: "PATCH",
-      headers: {
-        "content-type": "application/json",
-      },
-      body: JSON.stringify({ status }),
-    })
+    fetch(
+      `https://backend-songle.vercel.app/instructorClasses/${instructorClass._id}`,
+      {
+        method: "PATCH",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify({ status }),
+      }
+    )
       .then((res) => res.json())
       .then((data) => {
         //console.log(data);
         refetch();
 
         if (status === "approved") {
-          fetch("http://localhost:3000/classes", {
+          fetch("https://backend-songle.vercel.app/classes", {
             method: "POST",
             headers: {
               "content-type": "application/json",
@@ -62,7 +65,7 @@ const ManageClasses = () => {
 
   const handleFeedback = (id, feedback) => {
     //console.log("form", id, feedback);
-    fetch(`http://localhost:3000/instructorClasses/${id}`, {
+    fetch(`https://backend-songle.vercel.app/instructorClasses/${id}`, {
       method: "PATCH",
       headers: {
         "content-type": "application/json",
