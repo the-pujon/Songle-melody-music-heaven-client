@@ -12,6 +12,7 @@ import ManageUsers from "../Pages/ForAdmin/ManageUsers/ManageUsers";
 import PrivateRoute from "./PrivateRoute";
 import AddClass from "../Pages/ForInstructor/AddClass/AddClass";
 import InstructorClasses from "../Pages/ForInstructor/instructorClasses/instructorClasses";
+import ManageClasses from "../Pages/ForAdmin/ManageClasses/ManageClasses";
 
 const router = createBrowserRouter([
   {
@@ -60,6 +61,10 @@ const router = createBrowserRouter([
       {
         path: "manageUsers",
         element: <ManageUsers />,
+      },
+      {
+        path: "manageClasses",
+        element: <ManageClasses />,
       },
       //instructor
       {

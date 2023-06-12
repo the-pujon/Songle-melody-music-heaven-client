@@ -42,7 +42,9 @@ const Dashboard = () => {
                   <Link>Admin Home</Link>
                 </li>
                 <li className="hover:text-[color:var(--hoverColor2)]">
-                  <Link>Manage Classes</Link>
+                  <NavLink to="/dashboard/manageClasses">
+                    Manage Classes
+                  </NavLink>
                 </li>
                 <li className="hover:text-[color:var(--hoverColor2)]">
                   <NavLink to="/dashboard/manageUsers">Manage Users</NavLink>

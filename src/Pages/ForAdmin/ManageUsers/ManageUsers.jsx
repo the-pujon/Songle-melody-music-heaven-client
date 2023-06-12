@@ -33,9 +33,9 @@ const ManageUsers = () => {
       .catch((err) => console.error(err));
   };
 
-  const handleDelete = (user) => {
-    console.log(user);
-  };
+  //const handleDelete = (user) => {
+  //  console.log(user);
+  //};
 
   return (
     <div>
@@ -56,7 +56,8 @@ const ManageUsers = () => {
                   <th>Name</th>
                   <th>Email</th>
                   <th>Role</th>
-                  <th>action</th>
+                  <th>Action</th>
+                  {/*<th>action</th>*/}
                 </tr>
               </thead>
               <tbody>
@@ -75,6 +76,7 @@ const ManageUsers = () => {
                     </td>
                     <td>{user.name}</td>
                     <td>{user.email}</td>
+                    <td>{user.role}</td>
                     <td>
                       <button
                         disabled={
@@ -104,14 +106,14 @@ const ManageUsers = () => {
                       </button>
                     </td>
 
-                    <td className="">
+                    {/*<td className="">
                       <button
                         onClick={() => handleDelete(user)}
                         className="btn btn-sm bg-[color:var(--secondaryColor)] text-white hover:bg-[color:var(--hoverColor1)]"
                       >
                         <FaTrash />
                       </button>
-                    </td>
+                    </td>*/}
                   </tr>
                 ))}
               </tbody>

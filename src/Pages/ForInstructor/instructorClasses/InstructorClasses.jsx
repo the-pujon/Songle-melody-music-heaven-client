@@ -45,7 +45,11 @@ const InstructorClasses = () => {
               {instructorClasses.map((instructorClass) => (
                 <tr key={instructorClass._id}>
                   <th>
-                    <img src={instructorClass.photoURL} alt="" />
+                    <div className="avatar">
+                      <div className="mask mask-squircle w-12 h-12">
+                        <img src={instructorClass.photoURL} alt="" />
+                      </div>
+                    </div>
                   </th>
                   <td>{instructorClass.className}</td>
                   <td>{instructorClass.instrument}</td>
