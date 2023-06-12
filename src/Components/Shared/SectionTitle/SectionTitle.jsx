@@ -8,7 +8,7 @@ const SectionTitle = ({ title }) => {
   return (
     <div className="flex items-center justify-center my-8">
       <Fade
-        delay={100}
+        delay={0}
         cascade
         duration={500}
         damping={1e-1}
@@ -20,7 +20,7 @@ const SectionTitle = ({ title }) => {
         <SiPeakdesign />
       </Fade>
       <Fade
-        delay={600}
+        delay={300}
         cascade
         duration={500}
         damping={1e-1}
@@ -29,7 +29,7 @@ const SectionTitle = ({ title }) => {
         {title}
       </Fade>
       <Fade
-        delay={1500}
+        delay={1100}
         cascade
         duration={500}
         damping={1e-1}
