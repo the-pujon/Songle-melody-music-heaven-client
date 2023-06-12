@@ -25,6 +25,8 @@ const ClassCard = ({ card }) => {
   const navigate = useNavigate();
 
   const handleSelectedClass = (card) => {
+    //console.log(card);
+
     const selectedClass = {
       className,
       image,
@@ -50,17 +52,33 @@ const ClassCard = ({ card }) => {
           refetch1();
 
           const remainingSeats = seatsAvailable - 1;
+          const newTotalStudents = totalStudents + 1;
 
           fetch(`http://localhost:3000/classes/${selectedClass.classId}`, {
             method: "PUT",
             headers: {
               "content-type": "application/json",
             },
-            body: JSON.stringify({ remainingSeats }),
+            body: JSON.stringify({ remainingSeats, newTotalStudents }),
           })
             .then((res) => res.json())
             .then((data) => {
               refetch2();
+
+              if (card?.instructorId) {
+                fetch(
+                  `http://localhost:3000/instructorClasses/${card?.instructorId}`,
+                  {
+                    method: "PATCH",
+                    headers: {
+                      "content-type": "application/json",
+                    },
+                    body: JSON.stringify({ remainingSeats, newTotalStudents }),
+                  }
+                )
+                  .then((res) => res.json())
+                  .then((data) => console.log("done"));
+              }
             });
 
           Swal.fire({

@@ -29,6 +29,7 @@ const ManageClasses = () => {
       seatsAvailable: instructorClass.seats,
       className: instructorClass.className,
       totalStudents: instructorClass.totalStudents,
+      instructorId: instructorClass._id,
     };
 
     //console.log(instructorClass, status);
