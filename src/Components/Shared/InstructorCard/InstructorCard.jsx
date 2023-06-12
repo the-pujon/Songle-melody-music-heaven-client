@@ -1,8 +1,9 @@
 import React from "react";
+import { Fade } from "react-awesome-reveal";
 
 const InstructorCard = ({ img, name, email }) => {
   return (
-    <div>
+    <Fade>
       <div className="card card-compact w-96 bg-[color:var(--primaryColor)] shadow-xl rounded-none">
         <figure className="h-64">
           <img src={img} alt="Shoes" />
@@ -15,7 +16,7 @@ const InstructorCard = ({ img, name, email }) => {
           </div>
         </div>
       </div>
-    </div>
+    </Fade>
   );
 };
 

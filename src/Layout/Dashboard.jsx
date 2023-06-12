@@ -1,6 +1,14 @@
 import React from "react";
 import { Link, NavLink, Outlet } from "react-router-dom";
-import { AiOutlineMenuUnfold } from "react-icons/ai";
+import {
+  AiOutlineMenuUnfold,
+  AiOutlineHome,
+  AiOutlineFileAdd,
+} from "react-icons/ai";
+import { FaUsers } from "react-icons/fa";
+import { BsBuildingAdd } from "react-icons/bs";
+import { BiSelectMultiple, BiHistory } from "react-icons/bi";
+
 import useRole from "../Hooks/useRole";
 
 const Dashboard = () => {
@@ -39,7 +47,9 @@ const Dashboard = () => {
             {role === "admin" ? (
               <>
                 <li className="hover:text-[color:var(--hoverColor2)]">
-                  <Link>Admin Home</Link>
+                  <Link>
+                    <AiOutlineHome /> Admin Home
+                  </Link>
                 </li>
                 <li className="hover:text-[color:var(--hoverColor2)]">
                   <NavLink to="/dashboard/manageClasses">
@@ -47,16 +57,22 @@ const Dashboard = () => {
                   </NavLink>
                 </li>
                 <li className="hover:text-[color:var(--hoverColor2)]">
-                  <NavLink to="/dashboard/manageUsers">Manage Users</NavLink>
+                  <NavLink to="/dashboard/manageUsers">
+                    <FaUsers /> Manage Users
+                  </NavLink>
                 </li>
               </>
             ) : role === "instructor" ? (
               <>
                 <li className="hover:text-[color:var(--hoverColor2)]">
-                  <Link>Instructor Home</Link>
+                  <Link>
+                    <AiOutlineHome /> Instructor Home
+                  </Link>
                 </li>
                 <li className="hover:text-[color:var(--hoverColor2)]">
-                  <NavLink to="/dashboard/addClass">Add Class</NavLink>
+                  <NavLink to="/dashboard/addClass">
+                    <AiOutlineFileAdd /> Add Class
+                  </NavLink>
                 </li>
                 <li className="hover:text-[color:var(--hoverColor2)]">
                   <NavLink to="/dashboard/myClasses">My Classes</NavLink>
@@ -65,11 +81,13 @@ const Dashboard = () => {
             ) : (
               <>
                 <li className="hover:text-[color:var(--hoverColor2)]">
-                  <Link>Student Home</Link>
+                  <Link>
+                    <AiOutlineHome /> Student Home
+                  </Link>
                 </li>
                 <li className="hover:text-[color:var(--hoverColor2)]">
                   <NavLink to="/dashboard/selectedClass">
-                    Selected Class
+                    <BiSelectMultiple /> Selected Class
                   </NavLink>
                 </li>
                 <li className="hover:text-[color:var(--hoverColor2)]">
@@ -78,7 +96,9 @@ const Dashboard = () => {
                   </NavLink>
                 </li>
                 <li className="hover:text-[color:var(--hoverColor2)]">
-                  <Link>Payment History</Link>
+                  <Link>
+                    <BiHistory /> Payment History
+                  </Link>
                 </li>
               </>
             )}

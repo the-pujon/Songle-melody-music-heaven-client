@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 
 import SectionTitle from "../../Shared/SectionTitle/SectionTitle";
 import ClassCard from "../../Shared/ClassCard/ClassCard";
+import { Fade } from "react-awesome-reveal";
 
 const PopularClass = () => {
   const [popularClasses, setPopularClasses] = useState([]);

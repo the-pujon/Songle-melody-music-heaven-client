@@ -4,6 +4,7 @@ import Swal from "sweetalert2";
 import useSelectClass from "../../../Hooks/useSelectClass";
 import { useNavigate } from "react-router-dom";
 import useClasses from "../../../Hooks/useClasses";
+import { Bounce, Fade, Slide } from "react-awesome-reveal";
 
 const ClassCard = ({ card }) => {
   const {
@@ -107,7 +108,7 @@ const ClassCard = ({ card }) => {
   };
 
   return (
-    <div>
+    <Fade>
       <div
         className={`card card-compact w-96 bg-base-100 shadow-xl rounded-none ${
           seatsAvailable === 0 && "border-[3px] border-red-600"
@@ -134,7 +135,7 @@ const ClassCard = ({ card }) => {
           </div>
         </div>
       </div>
-    </div>
+    </Fade>
   );
 };
 
