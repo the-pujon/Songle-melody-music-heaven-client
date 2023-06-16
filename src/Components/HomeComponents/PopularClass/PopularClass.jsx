@@ -20,7 +20,7 @@ const PopularClass = () => {
 
   return (
     <div className="my-20">
-      <SectionTitle title="Popular Classes" />
+      <SectionTitle title1="Popular Classes" />
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-fit gap-8 mx-auto">
         {popularClasses.map((card) => (
           <div key={card._id}>

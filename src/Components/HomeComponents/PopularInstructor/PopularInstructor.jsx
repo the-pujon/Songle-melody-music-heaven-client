@@ -30,26 +30,9 @@ const PopularInstructor = () => {
   }, []);
 
   return (
-    <div className="my-10">
-      <SectionTitle title="Popular Instructor" />
-      {/*<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-fit gap-8 mx-auto">
-        {popularInstructor.map((card) => (
-          <div key={card.name}>
-            <div className="card card-compact w-96 bg-base-100 shadow-xl">
-              <figure>
-                <img src={card.image} alt="Shoes" />
-              </figure>
-              <div className="card-body">
-                <h2 className="card-title">Name: {card.name}</h2>
-                <p>Email: {card.email}</p>
-                <div className="card-actions justify-end">
-                  <button className="btn btn-primary">Select Class</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>*/}
+    <div className="my-10 flex">
+      <SectionTitle title1="Popular" title2="Instructors" />
+
       <Swiper
         effect={"coverflow"}
         grabCursor={true}
