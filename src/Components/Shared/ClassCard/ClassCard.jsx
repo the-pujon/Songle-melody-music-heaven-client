@@ -5,8 +5,11 @@ import useSelectClass from "../../../Hooks/useSelectClass";
 import { useNavigate } from "react-router-dom";
 import useClasses from "../../../Hooks/useClasses";
 import { Bounce, Fade, Slide } from "react-awesome-reveal";
+import useRole from "../../../Hooks/useRole";
 
 const ClassCard = ({ card }) => {
+  const [role] = useRole();
+
   const {
     _id,
     className,
@@ -128,13 +131,15 @@ const ClassCard = ({ card }) => {
           <p>Available Seats: {seatsAvailable}</p>
           <p>Price: {price}</p>
           <div className="card-actions justify-end">
-            <button
-              disabled={seatsAvailable === 0}
-              onClick={() => handleSelectedClass(card)}
-              className="btn btn-outline disabled:bg-gray-300  hover:bg-[color:var(--hoverColor2)] border-2 border-black rounded-none"
-            >
-              Select Class
-            </button>
+            {role === "student" && (
+              <button
+                disabled={seatsAvailable === 0}
+                onClick={() => handleSelectedClass(card)}
+                className="btn btn-outline disabled:bg-gray-300  hover:bg-[color:var(--hoverColor2)] border-2 border-black rounded-none"
+              >
+                Select Class
+              </button>
+            )}
           </div>
         </div>
       </div>

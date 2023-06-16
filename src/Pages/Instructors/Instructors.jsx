@@ -20,11 +20,11 @@ const Instructors = () => {
       <PageCover
         img={teacher}
         title="Instructors"
-        subtitle="A good Instructor is equal to a library"
+        subtitle="“The mediocre teacher tells. The good teacher explains. The superior teacher demonstrates. The great teacher inspires.” - William Ward"
       />
       <div className="grid grid-cols-1 gap-4 my-10 md:grid-cols-2 lg:grid-cols-3 w-11/12 mx-auto">
         {instructors.map((instructor) => (
-          <div>
+          <div key={instructor._id}>
             <InstructorCard
               img={instructor.image}
               name={instructor.name}

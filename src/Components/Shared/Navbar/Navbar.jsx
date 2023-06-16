@@ -10,10 +10,13 @@ import useAuth from "../../../Hooks/useAuth";
 import useSelectClass from "../../../Hooks/useSelectClass";
 import education from "../../../assets/classroom.png";
 import logo from "../../../assets/logo2.png";
+import useRole from "../../../Hooks/useRole";
 
 const Navbar = () => {
   const { user, loading, logOut } = useAuth();
   //console.log(user, loading);
+
+  const [role] = useRole();
 
   const [selectedClasses] = useSelectClass();
 
@@ -37,7 +40,17 @@ const Navbar = () => {
         <NavLink to="/classes">Classes</NavLink>
       </li>
       <li>
-        <NavLink to="/dashboard">Dashboard</NavLink>
+        <NavLink
+          to={`/dashboard/${
+            role === "admin"
+              ? "manageUsers"
+              : role === "instructor"
+              ? "myClasses"
+              : "selectedClass"
+          }`}
+        >
+          Dashboard
+        </NavLink>
       </li>
     </>
   );
@@ -79,18 +92,20 @@ const Navbar = () => {
             <ul className="menu menu-horizontal px-1">{navbarOption}</ul>
           </div>
           <div className="navbar-end">
-            <div className="indicator me-8">
-              <span className="indicator-item rounded-full w-7 rounded-bl-none ml-10 text-xs p-[4px] text-center bg-[color:var(--secondaryColor)]">
-                {selectedClasses.length || 0}
-              </span>
-              <Link
-                to="/dashboard/selectedClass"
-                className="btn border-0 btn-sm text-2xl"
-              >
-                {/*<SiGoogleclassroom />*/}
-                <img src={education} alt="" className="w-8 " />
-              </Link>
-            </div>
+            {role === "student" && (
+              <div className="indicator me-8">
+                <span className="indicator-item rounded-full w-7 rounded-bl-none ml-10 text-xs p-[4px] text-center bg-[color:var(--secondaryColor)]">
+                  {selectedClasses.length || 0}
+                </span>
+                <Link
+                  to="/dashboard/selectedClass"
+                  className="btn border-0 btn-sm text-2xl"
+                >
+                  {/*<SiGoogleclassroom />*/}
+                  <img src={education} alt="" className="w-8 " />
+                </Link>
+              </div>
+            )}
             <div className="flex-none">
               <div className="dropdown dropdown-end">
                 {user ? (

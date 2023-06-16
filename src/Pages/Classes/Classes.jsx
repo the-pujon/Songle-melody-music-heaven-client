@@ -9,7 +9,11 @@ const Classes = () => {
 
   return (
     <div>
-      <PageCover img={class1} title="Classes" subtitle="You can learn" />
+      <PageCover
+        img={class1}
+        title="Classes"
+        subtitle="Everything in the universe has a rhythm, everything dances. ~ Maya Angelou"
+      />
       <div className="grid my-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 w-11/12 mx-auto">
         {allClasses.map((card) => (
           <div key={card._id}>
