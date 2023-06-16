@@ -18,6 +18,7 @@ const SelectedClass = () => {
       .then((data) => {
         console.log(data);
         refetch1();
+        console.log(selectedClass.seatsAvailable);
 
         const remainingSeats = selectedClass.seatsAvailable + 1;
 

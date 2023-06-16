@@ -34,7 +34,7 @@ const ClassCard = ({ card }) => {
       instructor,
       instrument,
       price,
-      seatsAvailable,
+      seatsAvailable: seatsAvailable - 1,
       totalStudents,
       classId: _id,
       userEmail: user?.email,

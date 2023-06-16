@@ -5,7 +5,7 @@ import useAuth from "./useAuth";
 //import useAuth from "./useAuth";
 
 const axiosSecure = axios.create({
-  baseURL: "https://backend-songle.vercel.app",
+  baseURL: "https://backend-songle.vercel.app/",
 });
 
 const useAxiosSecure = () => {

@@ -69,10 +69,16 @@ const CheckOutForm = ({ selectedClass, price }) => {
       setTransactionId(paymentIntent.id);
       console.log(transactionId);
 
+      //console.log(selectedClass);
+
       const payment = {
         selectedClassId: selectedClass._id,
         classId: selectedClass.classId,
         instructorId: selectedClass?.instructorId,
+        image: selectedClass?.image,
+        instructorName: selectedClass?.instructor,
+        price: selectedClass?.price,
+        instrument: selectedClass?.instrument,
         name: user?.displayName,
         email: user?.email,
         transactionId: paymentIntent.id,
