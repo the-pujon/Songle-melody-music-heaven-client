@@ -71,9 +71,8 @@ const Navbar = () => {
                 {navbarOption}
               </ul>
             </div>
-            <div className="  normal-case text-xl">
-              Songle Melody Music Heaven
-              {/*<img src={logo} alt="" />*/}
+            <div>
+              <img src={logo} alt="" className="w-28" />
             </div>
           </div>
           <div className="navbar-center hidden lg:flex">
