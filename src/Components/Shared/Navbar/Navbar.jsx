@@ -9,8 +9,8 @@ import useAuth from "../../../Hooks/useAuth";
 //import { SiGoogleclassroom } from "react-icons/si";
 import useSelectClass from "../../../Hooks/useSelectClass";
 import education from "../../../assets/classroom.png";
+import logo from "../../../assets/logo2.png";
 
-//TODO: Website Logo
 const Navbar = () => {
   const { user, loading, logOut } = useAuth();
   //console.log(user, loading);
@@ -73,6 +73,7 @@ const Navbar = () => {
             </div>
             <div className="  normal-case text-xl">
               Songle Melody Music Heaven
+              {/*<img src={logo} alt="" />*/}
             </div>
           </div>
           <div className="navbar-center hidden lg:flex">
