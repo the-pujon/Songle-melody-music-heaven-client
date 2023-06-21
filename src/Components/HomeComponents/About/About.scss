@@ -18,10 +18,12 @@
             margin-right: 10rem;
 
             @media screen and (max-width:768px) {
+                order: 2;
                 padding-right: 0;
                 padding: 1rem;
                 margin-right: 0rem;
                 border: none;
+
 
             }
         }

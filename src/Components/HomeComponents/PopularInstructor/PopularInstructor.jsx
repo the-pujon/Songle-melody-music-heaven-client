@@ -36,7 +36,6 @@ const PopularInstructor = () => {
       <Swiper
         effect={"coverflow"}
         grabCursor={true}
-        initialSlide={2}
         centeredSlides={true}
         slidesPerView={1}
         coverflowEffect={{
