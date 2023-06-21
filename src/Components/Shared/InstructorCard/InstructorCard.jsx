@@ -4,7 +4,7 @@ import { Fade, Slide } from "react-awesome-reveal";
 const InstructorCard = ({ img, name, email }) => {
   return (
     <Fade delay={0} duration={500} cascade damping={1e-1}>
-      <div className="card card-compact w-96 bg-[color:var(--primaryColor)] shadow-xl rounded-none">
+      <div className="card card-compact w-80 md:w-96 bg-[color:var(--primaryColor)] shadow-xl rounded-none">
         <figure className="h-64">
           <img src={img} alt="Shoes" />
         </figure>

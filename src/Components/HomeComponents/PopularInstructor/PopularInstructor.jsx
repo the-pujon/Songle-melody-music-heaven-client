@@ -30,8 +30,36 @@ const PopularInstructor = () => {
   }, []);
 
   return (
-    <div className="my-10 flex">
+    <div className="my-10 flex flex-col md:flex-row">
       <SectionTitle title1="Popular" title2="Instructors" />
+
+      <Swiper
+        effect={"coverflow"}
+        grabCursor={true}
+        initialSlide={2}
+        centeredSlides={true}
+        slidesPerView={1}
+        coverflowEffect={{
+          rotate: 0,
+          stretch: 0,
+          depth: 0,
+          modifier: 1,
+          slideShadows: true,
+        }}
+        pagination={true}
+        modules={[EffectCoverflow, Pagination]}
+        className="mySwiper w-11/12 mx-auto !block md:!hidden"
+      >
+        {popularInstructor.map((card) => (
+          <SwiperSlide key={card._id}>
+            <InstructorCard
+              img={card.image}
+              name={card.name}
+              email={card.name}
+            />
+          </SwiperSlide>
+        ))}
+      </Swiper>
 
       <Swiper
         effect={"coverflow"}
@@ -48,7 +76,7 @@ const PopularInstructor = () => {
         }}
         //pagination={true}
         modules={[EffectCoverflow, Pagination]}
-        className="mySwiper w-11/12 mx-auto"
+        className="mySwiper w-11/12 mx-auto !hidden md:!block "
       >
         {popularInstructor.map((card) => (
           <SwiperSlide key={card._id}>

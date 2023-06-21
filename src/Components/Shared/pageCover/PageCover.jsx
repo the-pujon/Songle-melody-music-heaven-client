@@ -10,10 +10,10 @@ const PageCover = ({ img, title, subtitle }) => {
       >
         <div className="hero-overlay bg-opacity-60"></div>
         <div className="hero-content text-center text-neutral-content">
-          <div className="">
+          <div className="backdrop-blur-sm">
             <h1
               style={{ textShadow: "0px 0px 70px black" }}
-              className="mb-5 text-8xl text-center uppercase text-[color:var(--primaryColor)]  font-bold"
+              className="mb-5 text-4xl md:text-8xl text-center uppercase text-[color:var(--primaryColor)]  font-bold"
             >
               {title}
             </h1>

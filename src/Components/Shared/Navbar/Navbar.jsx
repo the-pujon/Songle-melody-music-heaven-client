@@ -58,7 +58,7 @@ const Navbar = () => {
   return (
     <div>
       {!noHeaderFooter && (
-        <div className="navbar bg-[#002e33]/50 backdrop-blur-sm fixed z-50 text-white">
+        <div className="navbar bg-[#002e33]/60 backdrop-blur-sm fixed z-50 text-white">
           <div className="navbar-start">
             <div className="dropdown">
               <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -79,7 +79,8 @@ const Navbar = () => {
               </label>
               <ul
                 tabIndex={0}
-                className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
+                style={{ backdropFilter: "4px" }}
+                className="menu menu-compact bg-[#002e33]/60 backdrop-filter dropdown-content mt-[.65rem] p-2 shadow bg-base-100 rounded-ee-3xl rounded-es-md w-52"
               >
                 {navbarOption}
               </ul>

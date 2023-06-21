@@ -19,7 +19,7 @@ const Banner = ({ image, title }) => {
             cascade
             duration={2000}
             damping={1e-1}
-            className=" text-8xl  font-bold flex flex-col"
+            className=" text-6xl leading-tight md:text-8xl  font-bold flex flex-col"
           >
             <span>WELCOME To</span>
 
