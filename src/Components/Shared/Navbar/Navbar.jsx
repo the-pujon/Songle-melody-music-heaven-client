@@ -79,8 +79,7 @@ const Navbar = () => {
               </label>
               <ul
                 tabIndex={0}
-                style={{ backdropFilter: "4px" }}
-                className="menu menu-compact bg-[#002e33]/60 backdrop-filter dropdown-content mt-[.65rem] p-2 shadow bg-base-100 rounded-ee-3xl rounded-es-md w-52"
+                className="menu menu-compact dropdown-content space-y-4 mt-[0.66rem] p-3 bg-[#002e33]/60   rounded-b-xl w-52"
               >
                 {navbarOption}
               </ul>
